@@ -1,5 +1,6 @@
 package policiadnfr.gob.itvremolques.Data.Views.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -36,8 +37,8 @@ public class PrincipalActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent= new Intent(PrincipalActivity.this,RegistroITVActivity.class);
+                startActivity(intent);
             }
         });
 

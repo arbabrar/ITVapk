@@ -9,10 +9,12 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
     <uses-feature android:name="android.hardware.location.gps" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_itvtic"
@@ -21,11 +23,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Data.Views.Activity.RegistroITVActivity"></activity>
         <activity
             android:name=".Data.Views.Activity.PrincipalActivity"
             android:label="@string/polbol"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Data.Views.Activity.PuntosActivity" />
         <activity android:name=".Data.Views.Activity.DepartamentoActivity" />
         <activity
