@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvplacareseerva"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:text="2369FFT"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvhora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="08:00:00"
+            android:textColor="@color/alert"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tvfullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alvaro Bacarrea Arabe"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

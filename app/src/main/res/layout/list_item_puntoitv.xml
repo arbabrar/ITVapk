@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvdireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/creador"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvmunicipio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/creador"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <ImageView
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_puntoins"/>
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "881157122891",
+    "firebase_url": "https://itvpoliciaboliviana.firebaseio.com",
+    "project_id": "itvpoliciaboliviana",
+    "storage_bucket": "itvpoliciaboliviana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881157122891:android:e98958eec4783da8e156ce",
+        "android_client_info": {
+          "package_name": "policiadnfr.gob.itvremolques"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881157122891-243tqll1veoe3726pr5graumdf3qv0vq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "policiadnfr.gob.itvremolques",
+            "certificate_hash": "a80239c0890c085cf050988fdca7bc5c683c35cb"
+          }
+        },
+        {
+          "client_id": "881157122891-6slkda6s3ouvi1h9kj29c0uj7e6i9q43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcdtndPnXaViFzkfGBg8NR9993TP_8w5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881157122891-6slkda6s3ouvi1h9kj29c0uj7e6i9q43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ITV T.I.C</string>
+    <string name="descripcion_app">Registro de Inspeccion del Transporte Internacional de Carga</string>
+    <string name="policia_boliviana">Policia Boliviana</string>
+    <string name="Nro_telefono">Ingrese el Nro de telefono asignado</string>
+    <string name="input_telefono">Ingrese el numero de telefono</string>
+    <string name="codigo_sms">Solicitar Codigo de Verificacion</string>
+    <string name="dnfr">DNFR</string>
+
+    <string name="codigo_de_verificacion">Codigo de Verificacion</string>
+    <string name="string_codigo">Hemos enviado un codigo de verificacion a tu numero telefonico espera por favor...</string>
+    <string name="ingresar">ingresar</string>
+    <string name="polbol">POLICIA BOLIVIANA</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contrasena</string>
+    <string name="espera">Espera por favor...</string>
+    <string name="title_activity_modo_carga">ModoCargaActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="creador">Cap. Alvaro Roberto Bacarreza Arzabe</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Opciones</string>
+
+    <string name="menu_reservas">Reservas</string>
+    <string name="menu_historial">Historial</string>
+    <string name="menu_puntoItv">Cambiar Punto </string>
+
+    <string name="home_second">Home Second</string>
+</resources>
