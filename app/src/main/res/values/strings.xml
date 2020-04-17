@@ -30,4 +30,8 @@
     <string name="menu_puntoItv">Cambiar Punto </string>
 
     <string name="home_second">Home Second</string>
+    <string-array name="tipoplaca">
+        <item>RUAT</item>
+        <item>OTRO</item>
+    </string-array>
 </resources>
