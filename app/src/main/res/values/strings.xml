@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ITV T.I.C</string>
-    <string name="descripcion_app">Registro de Inspeccion del Transporte Internacional de Carga</string>
+    <string name="descripcion_app">Registro de Inspeccion Tecnica Vehicular</string>
     <string name="policia_boliviana">Policia Boliviana</string>
     <string name="Nro_telefono">Ingrese el Nro de telefono asignado</string>
     <string name="input_telefono">Ingrese el numero de telefono</string>

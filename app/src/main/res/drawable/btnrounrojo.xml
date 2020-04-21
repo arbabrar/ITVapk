@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/alert">
+    <item android:id="@+id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/alertprymari"/>
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+    <item android:id="@+id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="180"
+                android:endColor="@color/alert"
+                android:startColor="@color/alertprymari"
+                android:type="linear"
+                />
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+</ripple>

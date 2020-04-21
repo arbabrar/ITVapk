@@ -4,8 +4,10 @@ import java.util.List;
 
 import policiadnfr.gob.itvremolques.Data.Model.Celular;
 import policiadnfr.gob.itvremolques.Data.Model.LoginBody;
+import policiadnfr.gob.itvremolques.Data.Model.RegistroITV;
 import policiadnfr.gob.itvremolques.Data.Model.ResponseCheck;
 import policiadnfr.gob.itvremolques.Data.Model.User;
+import policiadnfr.gob.itvremolques.Data.Model.Vehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.departamento;
 import policiadnfr.gob.itvremolques.Data.Model.puntoItv;
 import policiadnfr.gob.itvremolques.Data.Model.reservas;
@@ -26,9 +28,9 @@ public interface ApiRoutes {
     Call<List<puntoItv>> getpuntoItv(@Path("id") int id_departamento);
     @GET("reservas/{id}")
     Call<List<reservas>> getReservas(@Path("id") int id_punto_inspeccion);
-    /*@POST("registroItv")
-    Call<Vehiculo> RegistroITV(@Body RegistroITV RegistroITV);
-    @POST("registroVehiculo")
+    @POST("DatosTecnicos")
+    Call<Vehiculo> getDatosTecnicos(@Body RegistroITV RegistroITV);
+    /*@POST("registroVehiculo")
     Call<Vehiculo> RegistroVehiculo(@Body RegistroVehiculo RegistroVehiculo);
     @GET("paises")
     Call<List<pais>> getpais();

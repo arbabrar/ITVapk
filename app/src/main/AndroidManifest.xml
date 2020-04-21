@@ -23,12 +23,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Data.Views.Activity.RegistroITVActivity"
+        <activity android:name=".Data.Views.Activity.RegistroVLActivity"></activity>
+        <activity
+            android:name=".Data.Views.Activity.RegistroITVActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoAction"
-            >
-
-        </activity>
+            android:theme="@style/AppThemeNoAction"></activity>
         <activity
             android:name=".Data.Views.Activity.PrincipalActivity"
             android:label="@string/polbol"
