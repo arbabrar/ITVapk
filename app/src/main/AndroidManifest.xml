@@ -23,16 +23,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Data.Views.Activity.RegistroVLActivity"></activity>
+        <activity android:name=".Data.Views.Activity.BuscarPersonaActivity"></activity>
+        <activity android:name=".Data.Views.Activity.DatoPersonaActivity" />
+        <activity
+            android:name=".Data.Views.Activity.FotografiaVehiculoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Data.Views.Activity.RegistroVLActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.RegistroITVActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoAction"></activity>
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.PrincipalActivity"
             android:label="@string/polbol"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
         <activity android:name=".Data.Views.Activity.PuntosActivity" />
         <activity android:name=".Data.Views.Activity.DepartamentoActivity" />
         <activity
@@ -48,7 +61,8 @@
         <activity
             android:name=".Data.Views.Activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoAction" />
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.CodigoVerificaActivity"
             android:screenOrientation="portrait"
@@ -59,6 +73,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoAction"
             tools:ignore="LockedOrientationActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="policiadnfr.gob.itvremolques.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

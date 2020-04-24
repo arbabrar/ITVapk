@@ -20,16 +20,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="32dp"
         android:orientation="vertical"
         android:padding="25dp"
         android:paddingTop="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivRecaudaciones"
-        app:layout_constraintVertical_bias="0.175">
+        app:layout_constraintVertical_bias="0.186">
 
 
         <TextView
@@ -38,6 +41,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/string_codigo"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center" />
 
         <EditText
@@ -48,11 +52,12 @@
             android:hint="@string/codigo_de_verificacion"
             android:inputType="phone"
             android:labelFor="@id/etTelefono"
+            android:padding="20dp"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:padding="20dp"
-            tools:targetApi="o"/>
+            tools:targetApi="o" />
 
         <ProgressBar
             android:id="@+id/pBCodigo"

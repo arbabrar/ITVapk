@@ -30,8 +30,26 @@
     <string name="menu_puntoItv">Cambiar Punto </string>
 
     <string name="home_second">Home Second</string>
+    <string name="titulo_vehiculo">Ingrese los datos del vehiculo</string>
+    <string name="servicio">Servicio</string>
+    <string name="ex_tipo_vehiculo">Tipo Vehiculo Ej:Rav4</string>
+    <string name="nro_motor">Nro de motor</string>
+    <string name="nro_chasis">Nro Chasis</string>
+    <string name="confirmar_placa">Confirmar Placa</string>
+    <string name="tipo_de_combustible">Tipo de combustible</string>
+    <string name="datos_radicatoria">Datos de Radicatoria</string>
+    <string name="fotografia_vehiculo">Fotografia Vehiculo</string>
+    <string name="continuar">Continuar</string>
     <string-array name="tipoplaca">
         <item>RUAT</item>
         <item>OTRO</item>
     </string-array>
+    <string-array name="tipocombustible">
+        <item>---Seleccione---</item>
+        <item>GASOLINA</item>
+        <item>DIESEL</item>
+        <item>GAS</item>
+    </string-array>
+    <string name="permission_camera_rationale">La camara es necesaria para la captura de imagenes de vehiculos como de personas en la ITV</string>
+    <string name="ok">Aceptar</string>
 </resources>

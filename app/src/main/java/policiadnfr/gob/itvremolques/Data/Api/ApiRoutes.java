@@ -3,8 +3,10 @@ package policiadnfr.gob.itvremolques.Data.Api;
 import java.util.List;
 
 import policiadnfr.gob.itvremolques.Data.Model.Celular;
+import policiadnfr.gob.itvremolques.Data.Model.FotoVehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.LoginBody;
 import policiadnfr.gob.itvremolques.Data.Model.RegistroITV;
+import policiadnfr.gob.itvremolques.Data.Model.RegistroVehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.ResponseCheck;
 import policiadnfr.gob.itvremolques.Data.Model.User;
 import policiadnfr.gob.itvremolques.Data.Model.Vehiculo;
@@ -30,9 +32,11 @@ public interface ApiRoutes {
     Call<List<reservas>> getReservas(@Path("id") int id_punto_inspeccion);
     @POST("DatosTecnicos")
     Call<Vehiculo> getDatosTecnicos(@Body RegistroITV RegistroITV);
-    /*@POST("registroVehiculo")
+    @POST("CompletaregistroVehiculo")
     Call<Vehiculo> RegistroVehiculo(@Body RegistroVehiculo RegistroVehiculo);
-    @GET("paises")
+    @POST("fotoVehiculo")
+    Call<Vehiculo> subirVehiculo(@Body FotoVehiculo FotoVehiculo);
+   /* @GET("paises")
     Call<List<pais>> getpais();
     @GET("provincia/{id}")
     Call<List<provincia>> getprovincia(@Path("id") String departamento);
@@ -44,8 +48,7 @@ public interface ApiRoutes {
     Call<persona> Registropersona(@Body persona persona);
     @POST("detalleITV")
     Call<ItvID> RegistrodetalleITV(@Body DetalleItv DetalleItv);
-    @POST("fotoVehiculo")
-    Call<Vehiculo> subirVehiculo(@Body FotoVehiculo FotoVehiculo);
+
     @POST("fotoPersona")
     Call<persona> subirPersona(@Body FotoPersona FotoPersona);
     @POST("InspeccionRegistro")

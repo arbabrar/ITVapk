@@ -56,7 +56,7 @@ public class RegistroITVActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 tipo_placa= parent.getItemAtPosition(position).toString();
-                toast(tipo_placa);
+               // toast(tipo_placa);
             }
 
             @Override
