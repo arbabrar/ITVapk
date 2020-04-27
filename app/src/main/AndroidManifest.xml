@@ -23,8 +23,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Data.Views.Activity.BuscarPersonaActivity"></activity>
-        <activity android:name=".Data.Views.Activity.DatoPersonaActivity" />
+        <activity android:name=".Data.Views.Activity.DatosInspeccionActivity"></activity>
+        <activity
+            android:name=".Data.Views.Activity.FotografiaPersonaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity
+            android:name=".Data.Views.Activity.RegistroPersona"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Data.Views.Activity.BuscarPersonaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.FotografiaVehiculoActivity"
             android:screenOrientation="portrait"

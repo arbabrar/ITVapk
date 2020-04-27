@@ -3,6 +3,7 @@ package policiadnfr.gob.itvremolques.Data.Api;
 import java.util.List;
 
 import policiadnfr.gob.itvremolques.Data.Model.Celular;
+import policiadnfr.gob.itvremolques.Data.Model.FotoPersona;
 import policiadnfr.gob.itvremolques.Data.Model.FotoVehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.LoginBody;
 import policiadnfr.gob.itvremolques.Data.Model.RegistroITV;
@@ -10,7 +11,9 @@ import policiadnfr.gob.itvremolques.Data.Model.RegistroVehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.ResponseCheck;
 import policiadnfr.gob.itvremolques.Data.Model.User;
 import policiadnfr.gob.itvremolques.Data.Model.Vehiculo;
+import policiadnfr.gob.itvremolques.Data.Model.datosPersona;
 import policiadnfr.gob.itvremolques.Data.Model.departamento;
+import policiadnfr.gob.itvremolques.Data.Model.persona;
 import policiadnfr.gob.itvremolques.Data.Model.puntoItv;
 import policiadnfr.gob.itvremolques.Data.Model.reservas;
 import retrofit2.Call;
@@ -34,8 +37,16 @@ public interface ApiRoutes {
     Call<Vehiculo> getDatosTecnicos(@Body RegistroITV RegistroITV);
     @POST("CompletaregistroVehiculo")
     Call<Vehiculo> RegistroVehiculo(@Body RegistroVehiculo RegistroVehiculo);
-    @POST("fotoVehiculo")
+    @POST("SetfotoVehiculo")
     Call<Vehiculo> subirVehiculo(@Body FotoVehiculo FotoVehiculo);
+    @GET("getPersona/{cedula}/{complemento}")
+    Call<datosPersona> getPersona(@Path("cedula") String nrodcocumento, @Path("complemento") String complemento);
+    @GET("getDatoPersona/{id}")
+    Call<datosPersona> getDatoPersona(@Path("id") long id_persona);
+    @POST("SavePersona")
+    Call<persona> Registropersona(@Body persona persona);
+    @POST("SetfotoPersona")
+    Call<persona> subirPersona(@Body FotoPersona FotoPersona);
    /* @GET("paises")
     Call<List<pais>> getpais();
     @GET("provincia/{id}")
@@ -44,13 +55,11 @@ public interface ApiRoutes {
     Call<List<municipio>> getmunicipio(@Body BodygetMunicipio BodygetMunicipio);
     @GET("expedido")
     Call<List<expedido>> getexpedido();
-    @POST("registroPersona")
-    Call<persona> Registropersona(@Body persona persona);
+
     @POST("detalleITV")
     Call<ItvID> RegistrodetalleITV(@Body DetalleItv DetalleItv);
 
-    @POST("fotoPersona")
-    Call<persona> subirPersona(@Body FotoPersona FotoPersona);
+
     @POST("InspeccionRegistro")
     Call<Inspeccion> RegistrarInspeccion(@Body Inspeccion Inspeccion);
     @GET("Certificado/{certificado}")

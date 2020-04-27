@@ -308,7 +308,7 @@ public class RegistroVLActivity extends AppCompatActivity {
     }
     private void registrarVehiculo(int idmuni,int idradicatoria,String tipovehiculo,int id_vehiculo, int id_user, String combustible){
         RegistroVehiculo _objregistroVehiculo=new RegistroVehiculo(tipovehiculo,combustible,id_user,id_vehiculo,idmuni,idradicatoria);
-        Log.d("Datos","pedjo "+ _objregistroVehiculo.getId_vehiculo());
+       // Log.d("Datos","pedjo "+ _objregistroVehiculo.getId_vehiculo());
         Call<Vehiculo> callRegistroVehiculo= Api.getApi().RegistroVehiculo(_objregistroVehiculo);
         callRegistroVehiculo.enqueue(new Callback<Vehiculo>() {
             @Override

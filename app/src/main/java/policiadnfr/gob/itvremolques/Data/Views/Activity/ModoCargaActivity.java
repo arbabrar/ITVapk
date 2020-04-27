@@ -114,7 +114,7 @@ public class ModoCargaActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(FirebaseAuth.getInstance().getCurrentUser()!=null ){
+                //if(FirebaseAuth.getInstance().getCurrentUser()!=null ){
                     if(prefs.estalogueado()){
                         if(prefs.tienepunto()){
                             Intent intent= new Intent(ModoCargaActivity.this,PrincipalActivity.class);
@@ -133,13 +133,13 @@ public class ModoCargaActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
 
-                }else{
-                    //Intent intent = new Intent(ModoCargaActivity.this,VerificacionActivity.class);
-                    Intent intent = new Intent(ModoCargaActivity.this,LoginActivity.class);
+                /*}else{
+                    Intent intent = new Intent(ModoCargaActivity.this,VerificacionActivity.class);
+                    //Intent intent = new Intent(ModoCargaActivity.this,LoginActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
 
-                }
+                }*/
 
 
             }

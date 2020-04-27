@@ -6,4 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".Data.Views.Activity.BuscarPersonaActivity">
 
+    <LinearLayout
+        android:id="@+id/layout_busqueda"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="506dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="15dp">
+
+        <TextView
+            android:id="@+id/tvCapBuscaPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:text="Ingrese el Nro de Documento de la persona"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etnrocedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nro de Documento"
+                    android:inputType="textCapCharacters"
+                    android:padding="15dp"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etcomplementocedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Complemento"
+                    android:inputType="textCapCharacters"
+                    android:padding="15dp"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBuscarPersona"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_redondo"
+            android:padding="15dp"
+            android:text="Buscar"
+            android:textColor="@color/primary_light" />
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

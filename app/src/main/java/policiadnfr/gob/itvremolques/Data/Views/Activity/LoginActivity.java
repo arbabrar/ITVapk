@@ -64,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         etusername = findViewById(R.id.etusername);
         etPassword = findViewById(R.id.etPassword);
         btnlogin = findViewById(R.id.btnlogin);
+        validaPermisos();
         Inicializar();
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
