@@ -41,7 +41,8 @@ public class RegistroVLActivity extends AppCompatActivity {
     private Button btnRegistroVL;
     private String Intentplaca,Intentchasis,Intentmotor,radicatoria,combustible;
     private String departamentos,provincia,municipio,IntentFotografia;
-    private int Intentid_vehiculo,id_user,idmunicipio,id_radicatoria;
+    private long Intentid_vehiculo;
+    private int id_user,idmunicipio,id_radicatoria;
     private ProgressDialog pdDialog;
     ArrayList<provincia> listaprovincia;
     ArrayList<municipio> listamunicipio;
@@ -68,7 +69,7 @@ public class RegistroVLActivity extends AppCompatActivity {
         adaptercombustible.setDropDownViewResource(R.layout.custom_spinner_dropdown);
         spicombustible.setAdapter(adaptercombustible);
         Intent intent=getIntent();
-        Intentid_vehiculo=intent.getIntExtra("id_vehiculo",0);
+        Intentid_vehiculo=intent.getLongExtra("id_vehiculo",0);
         Intentplaca=intent.getStringExtra("placa");
         Intentchasis=intent.getStringExtra("chasis");
         Intentmotor=intent.getStringExtra("motor");
@@ -306,7 +307,7 @@ public class RegistroVLActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),mensaje,Toast.LENGTH_LONG).show();
 
     }
-    private void registrarVehiculo(int idmuni,int idradicatoria,String tipovehiculo,int id_vehiculo, int id_user, String combustible){
+    private void registrarVehiculo(int idmuni,int idradicatoria,String tipovehiculo,long id_vehiculo, int id_user, String combustible){
         RegistroVehiculo _objregistroVehiculo=new RegistroVehiculo(tipovehiculo,combustible,id_user,id_vehiculo,idmuni,idradicatoria);
        // Log.d("Datos","pedjo "+ _objregistroVehiculo.getId_vehiculo());
         Call<Vehiculo> callRegistroVehiculo= Api.getApi().RegistroVehiculo(_objregistroVehiculo);
@@ -321,10 +322,11 @@ public class RegistroVLActivity extends AppCompatActivity {
                         Intent intent= new Intent(RegistroVLActivity.this,FotografiaVehiculoActivity.class);
                         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intent.putExtra("id_vehiculo",response.body().getId_vehiculo());
+                        Log.d("prueba","mensaje "+response.body().getId_vehiculo());
                         intent.putExtra("fotografia",IntentFotografia);
                         startActivity(intent);
                     }else {
-                        Log.d("prueba","mensaje"+response.body().getMensaje() );
+
                         toast(response.body().getMensaje());
                         etchasis.setText("");
                         etmotor.setText("");

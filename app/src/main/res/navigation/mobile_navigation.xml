@@ -16,9 +16,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="policiadnfr.gob.itvremolques.Data.Views.Activity.ui.gallery.GalleryFragment"
+        android:name="policiadnfr.gob.itvremolques.Data.Views.Activity.ui.gallery.HistorialFragment"
         android:label="@string/menu_historial"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_historial" />
 
     <fragment
         android:id="@+id/nav_slideshow"

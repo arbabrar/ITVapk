@@ -3,14 +3,19 @@ package policiadnfr.gob.itvremolques.Data.Api;
 import java.util.List;
 
 import policiadnfr.gob.itvremolques.Data.Model.Celular;
+import policiadnfr.gob.itvremolques.Data.Model.DetalleItv;
 import policiadnfr.gob.itvremolques.Data.Model.FotoPersona;
 import policiadnfr.gob.itvremolques.Data.Model.FotoVehiculo;
+import policiadnfr.gob.itvremolques.Data.Model.Historial;
+import policiadnfr.gob.itvremolques.Data.Model.Inspeccion;
+import policiadnfr.gob.itvremolques.Data.Model.ItvID;
 import policiadnfr.gob.itvremolques.Data.Model.LoginBody;
 import policiadnfr.gob.itvremolques.Data.Model.RegistroITV;
 import policiadnfr.gob.itvremolques.Data.Model.RegistroVehiculo;
 import policiadnfr.gob.itvremolques.Data.Model.ResponseCheck;
 import policiadnfr.gob.itvremolques.Data.Model.User;
 import policiadnfr.gob.itvremolques.Data.Model.Vehiculo;
+import policiadnfr.gob.itvremolques.Data.Model.datocertificado;
 import policiadnfr.gob.itvremolques.Data.Model.datosPersona;
 import policiadnfr.gob.itvremolques.Data.Model.departamento;
 import policiadnfr.gob.itvremolques.Data.Model.persona;
@@ -47,6 +52,14 @@ public interface ApiRoutes {
     Call<persona> Registropersona(@Body persona persona);
     @POST("SetfotoPersona")
     Call<persona> subirPersona(@Body FotoPersona FotoPersona);
+    @POST("DatosDetalleITV")
+    Call<ItvID> RegistrodetalleITV(@Body DetalleItv DetalleItv);
+    @GET("SearchCertificado/{certificado}")
+    Call<datocertificado> getdatoscertificado(@Path("certificado") String certificado);
+    @POST("RegistroInspeccion")
+    Call<Inspeccion> RegistrarInspeccion(@Body Inspeccion Inspeccion);
+    @GET("SearchInspecccion/{fecha}/{id_user})")
+    Call<List<Historial>> getInspecciones(@Path("fecha") String fecha,@Path("id_user") long id_user);
    /* @GET("paises")
     Call<List<pais>> getpais();
     @GET("provincia/{id}")

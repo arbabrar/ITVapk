@@ -50,7 +50,7 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
     private String departamentos,provincia,sexo,paises,municipio,tipodocumento,expedido,licencia,estadocivil;
     BDHelper conn;
     policiadnfr.gob.itvremolques.Data.Model.persona persona;
-    private long Intentid_persona,id_user,id_vehiculo;
+    private long Intentid_persona,Intentid_vehiculo,id_user,id_vehiculo;
     private int idpais,idmunicipio,idestadocivil,idcatlic,idtipdoc,idexpedido;
     private ProgressDialog pdDialog;
     ArrayList<estado_civil> listaestadocivil;
@@ -95,6 +95,7 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
         adaptersexo= new ArrayAdapter<>(this,R.layout.custom_spinner,getResources().getStringArray(R.array.sexo));
         adaptersexo.setDropDownViewResource(R.layout.custom_spinner_dropdown);
         spisexo.setAdapter(adaptersexo);
+        municipio="";
         spisexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -120,6 +121,7 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
         llenalicencia();
         Intent intent=getIntent();
         Intentid_persona=intent.getLongExtra("id_persona",0);
+        Intentid_vehiculo=intent.getLongExtra("id_vehiculo",0);
         Log.d("tagpersona","id_perona="+Intentid_persona);
 
         if(Intentid_persona!=0){
@@ -311,7 +313,9 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
         spimunicipio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 municipio=parent.getItemAtPosition(position).toString();
+                Log.d("municipio","Cargando "+ municipio);
                 if (!municipio.equals("Seleccione") && !municipio.equals("")){
                     SQLiteDatabase db = conn.getReadableDatabase();
                     String[] parametro = {municipio};
@@ -571,6 +575,7 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
         String fechanacimiento=etfechanacimiento.getText().toString();
         String nrofooo=etcelular.getText().toString();
         String email=etemail.getText().toString();
+        //String mun=municipio;
 
         if(!email.isEmpty()){
             if(!validarEmail(email)){
@@ -643,9 +648,10 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
             toast("Debe elegir la nacionalidad");
         }
         if (idpais==25){
-            if(municipio.equals("Seleccione") || municipio.equals("")){
+            if(municipio.equals("")|| municipio.equals("Seleccione")){
+
                 valido=false;
-                toast("Debe elegir la municipio");
+                toast("Debe elegir el municipio");
             }
             if(expedido.equals("Seleccione") || expedido.equals("")){
                 valido=false;
@@ -715,8 +721,9 @@ public class RegistroPersona extends AppCompatActivity implements View.OnClickLi
                         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intent.putExtra("fotografia",response.body().getFotografia_per());
                         //intent.putExtra("id_vehiculo",response.body().getId_vehiculo());
-                        id_vehiculo=prefs.getITV().getId_vehiculo();
-                        prefs.initITV(id_vehiculo,response.body().getId_persona());
+                       // id_vehiculo=prefs.getITV().getId_vehiculo();
+                        prefs.initITV(Intentid_vehiculo,response.body().getId_persona());
+                        Log.d("prueba","mensaje "+Intentid_vehiculo);
                         startActivity(intent);
 
                     }else {

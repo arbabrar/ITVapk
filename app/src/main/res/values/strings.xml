@@ -58,5 +58,39 @@
     </string-array>
     <string name="permission_camera_rationale">La camara es necesaria para la captura de imagenes de vehiculos como de personas en la ITV</string>
     <string name="permission_write_rationale">Es necesario para el guardado de imagenes de la ITV</string>
+    <string name="permission_gps_rationale">La ubiscacion sera utilizada con fines de Auditoria</string>
     <string name="ok">Aceptar</string>
+    <string name="text_buscar">Al Parecer el numero de certificado ya ha sido usado</string>
+    <string name="buscar_ceritifcado">Nro Certificado</string>
+    <string name="ej_placa">2369FFT</string>
+    <string name="ej_fecha">01-01-2020</string>
+    <string name="ej_certificado">0000001</string>
+    <string name="ej_hora">00:00:00</string>
+    <string name="ej_celular">71552715</string>
+    <string name="dnfr_pol_bol">DNFR-Pol Bol</string>
+    <string name="imprimir">imprimir</string>
+    <string name="finalizar">finalizar</string>
+    <string-array name="tieneono">
+        <item>Seleccione</item>
+        <item>TIENE</item>
+        <item>NO TIENE</item>
+    </string-array>
+
+    <string-array name="buenomalo">
+        <item>Seleccione</item>
+        <item>BUENO</item>
+        <item>REGULAR</item>
+        <item>MALO</item>
+    </string-array>
+    <string-array name="prenopre">
+        <item>Seleccione</item>
+        <item>PRESENTO</item>
+        <item>NO PRESENTO</item>
+    </string-array>
+    <string-array name="compincom">
+        <item>Seleccione</item>
+        <item>COMPLETO</item>
+        <item>INCOMPLETO</item>
+
+    </string-array>
 </resources>

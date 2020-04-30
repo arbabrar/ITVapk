@@ -117,7 +117,7 @@ public class FotografiaPersonaActivity extends AppCompatActivity {
                     //toast("Sacar Fotografia");
                 }else if(validar()==2){
                     //toast("cambiar actividad");
-                    Intent intent= new Intent(FotografiaPersonaActivity.this,BuscarPersonaActivity.class);
+                    Intent intent= new Intent(FotografiaPersonaActivity.this,DatosInspeccionActivity.class);
                     //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }

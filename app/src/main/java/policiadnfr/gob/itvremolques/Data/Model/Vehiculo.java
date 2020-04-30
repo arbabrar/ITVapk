@@ -1,7 +1,8 @@
 package policiadnfr.gob.itvremolques.Data.Model;
 
 public class Vehiculo {
-    public int status,id_vehiculo;
+    private long id_vehiculo;
+    public int status;
     public String mensaje,placa,chasis,motor,servicio,fotografia;
 
     public String getFotografia() {
@@ -60,11 +61,11 @@ public class Vehiculo {
         this.servicio = servicio;
     }
 
-    public int getId_vehiculo() {
+    public long getId_vehiculo() {
         return id_vehiculo;
     }
 
-    public void setId_vehiculo(int id_vehiculo) {
+    public void setId_vehiculo(long id_vehiculo) {
         this.id_vehiculo = id_vehiculo;
     }
 }

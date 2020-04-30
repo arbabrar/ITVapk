@@ -2,12 +2,12 @@ package policiadnfr.gob.itvremolques.Data.Model;
 
 public class RegistroVehiculo {
     private String tipovehiculo,tipocombustible;
-    private int id_user, id_vehiculo,id_municipio,id_radicatoria;
-
+    private int id_user, id_municipio,id_radicatoria;
+    private long id_vehiculo;
     public RegistroVehiculo() {
     }
 
-    public RegistroVehiculo(String tipovehiculo, String tipocombustible, int id_user, int id_vehiculo, int id_municipio, int id_radicatoria) {
+    public RegistroVehiculo(String tipovehiculo, String tipocombustible, int id_user, long id_vehiculo, int id_municipio, int id_radicatoria) {
         this.tipovehiculo = tipovehiculo;
         this.tipocombustible = tipocombustible;
         this.id_user = id_user;
@@ -40,11 +40,11 @@ public class RegistroVehiculo {
         this.id_user = id_user;
     }
 
-    public int getId_vehiculo() {
+    public long getId_vehiculo() {
         return id_vehiculo;
     }
 
-    public void setId_vehiculo(int id_vehiculo) {
+    public void setId_vehiculo(long id_vehiculo) {
         this.id_vehiculo = id_vehiculo;
     }
 

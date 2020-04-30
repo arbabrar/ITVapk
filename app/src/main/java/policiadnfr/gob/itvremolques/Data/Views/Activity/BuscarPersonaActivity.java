@@ -23,13 +23,15 @@ public class BuscarPersonaActivity extends AppCompatActivity {
     Button btnbuscarPersona;
     EditText etnrocedula,etcomplemento;
     String complemento;
-    long id_persona;
+    long id_persona,id_vehiculo;
     private ProgressDialog pdDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar_persona);
         btnbuscarPersona=findViewById(R.id.btnBuscarPersona);
+        Intent intent=getIntent();
+        id_vehiculo=intent.getLongExtra ("id_vehiculo",0);
         etnrocedula=findViewById(R.id.etnrocedula);
         etcomplemento=findViewById(R.id.etcomplementocedula);
         btnbuscarPersona.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +81,9 @@ public class BuscarPersonaActivity extends AppCompatActivity {
                                     Intent intent= new Intent(BuscarPersonaActivity.this,RegistroPersona.class);
                                     //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     intent.putExtra("id_persona",id_persona);
+                                    intent.putExtra("id_vehiculo",id_vehiculo);
+                                    Log.d("prueba","mensaje "+id_vehiculo);
+                                    Log.d("prueba","mensaje idpersona "+id_persona);
                                     //intent.putExtra("id_vehiculo",response.body().getId_vehiculo());
                                     //prefs.initITV(response.body().getId_vehiculo(),response.body().getId_persona());
                                     startActivity(intent);

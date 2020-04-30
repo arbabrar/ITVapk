@@ -23,12 +23,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Data.Views.Activity.DatosInspeccionActivity"></activity>
+        <activity android:name=".Data.Views.Activity.ImprimirActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity
+            android:name=".Data.Views.Activity.NroCertificadoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity
+            android:name=".Data.Views.Activity.DatosInspeccionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoAction"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.FotografiaPersonaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoAction"
-            tools:ignore="LockedOrientationActivity"></activity>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Data.Views.Activity.RegistroPersona"
             android:screenOrientation="portrait"

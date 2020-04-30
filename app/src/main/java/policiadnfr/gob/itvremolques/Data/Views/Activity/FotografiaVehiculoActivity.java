@@ -80,7 +80,7 @@ public class FotografiaVehiculoActivity extends AppCompatActivity implements Act
         iBtomarfoto=findViewById(R.id.iBFotoVl);
         mLayout = findViewById(R.id.sample_main_layout);
         Intent intent=getIntent();
-        id_vehiculo=intent.getIntExtra("id_vehiculo",0);
+        id_vehiculo=intent.getLongExtra("id_vehiculo",0);
         fotografia=intent.getStringExtra("fotografia");
         existe_foto=false;
         foto_capture=false;
@@ -131,6 +131,8 @@ public class FotografiaVehiculoActivity extends AppCompatActivity implements Act
                    //toast("cambiar actividad");
                    Intent intent= new Intent(FotografiaVehiculoActivity.this,BuscarPersonaActivity.class);
                    //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                   intent.putExtra("id_vehiculo", id_vehiculo);
+                   Log.d("prueba","mensaje "+id_vehiculo);
                    startActivity(intent);
                }
             }
@@ -318,8 +320,8 @@ public class FotografiaVehiculoActivity extends AppCompatActivity implements Act
         Toast.makeText(getApplicationContext(),mensaje,Toast.LENGTH_LONG).show();
 
     }
-    private void SubirFoto(int id_user, final long id_vehiculo, String imagen){
-        FotoVehiculo _objrSubirFoto=new FotoVehiculo(id_user,id_vehiculo,imagen);
+    private void SubirFoto(int id_user, final long idvehiculo, String imagen){
+        FotoVehiculo _objrSubirFoto=new FotoVehiculo(id_user,idvehiculo,imagen);
         Call<Vehiculo> callUploadVehiculo= Api.getApi().subirVehiculo(_objrSubirFoto);
         callUploadVehiculo.enqueue(new Callback<Vehiculo>() {
             @Override
@@ -329,8 +331,10 @@ public class FotografiaVehiculoActivity extends AppCompatActivity implements Act
                 if(response.isSuccessful()){
                     ;
                     if(response.body().getStatus()==605){
-                        prefs.initITV(id_vehiculo,0);
+
                         Intent intent= new Intent(FotografiaVehiculoActivity.this,BuscarPersonaActivity.class);
+                        intent.putExtra("id_vehiculo", id_vehiculo);
+                        Log.d("prueba","mensaje "+id_vehiculo);
                         startActivity(intent);
                     }else {
                         Log.d("prueba","mensaje"+response.body().getMensaje() );
